@@ -1,0 +1,4 @@
+<div style='white-space: nowrap'>
+    <i class="fa fa-twitter-square"></i>
+    [https://twitter.com/#!/jmeter_plugins Follow us on Twitter]
+</div>

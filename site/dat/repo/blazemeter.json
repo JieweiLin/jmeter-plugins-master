@@ -1,0 +1,465 @@
+[
+  {
+    "id": "blazemeter-debugger",
+    "name": "BlazeMeter Step-by-step Debugger",
+    "description": "This plugin enables step-by-step debugging of JMeter scripts",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-debugger/master/src/main/resources/com/blazemeter/jmeter/debugger/logo.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-debugger",
+    "vendor": "BlazeMeter.com",
+    "markerClass": "com.blazemeter.jmeter.debugger.engine.Debugger",
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://jmeter-plugins.org/files/thirdparty/jmeter-debugger-0.1.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      },
+      "0.2": {
+        "downloadUrl": "https://jmeter-plugins.org/files/thirdparty/jmeter-debugger-0.2.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      },
+      "0.3": {
+        "downloadUrl": "https://jmeter-plugins.org/files/thirdparty/jmeter-debugger-0.3.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      },
+      "0.4": {
+        "changes": "Fixed bugs on not evaluating variables",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-debugger/releases/download/0.4/jmeter-debugger-0.4.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      },
+      "0.5": {
+        "changes": "<p>- Add last sampler result tab;</p><p>- Choose TG from context of tree;</p><p>- Fixed italic font in tree not shown on Mac;</p><p>- Fixed blue color for current element is blue-on-blue for Mac;</p><p>- Fixed logging lab for old jmeter versions;</p><p>- Fixed clear data in info tabs and listeners;</p><p>- Fixed modification thread groups;</p>",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-debugger/releases/download/0.5/jmeter-debugger-0.5.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      },
+      "0.6": {
+        "changes": "Fix variables in assertions",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-debugger/releases/download/0.6/jmeter-debugger-0.6.jar",
+        "depends": [
+          "jmeter-core"
+        ]
+      }
+    }
+  },
+  {
+    "id": "jpgc-directory-listing",
+    "name": "Directory Listing Config",
+    "description": "Directory listing config allows to set file path from source directory into jmeter-variable",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-bzm-plugins/master/directory-listing/directoryListing.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/directory-listing/DirectoryListing.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.DirectoryListingConfig",
+    "componentClasses": [
+      "com.blazemeter.jmeter.DirectoryListingConfig",
+      "com.blazemeter.jmeter.DirectoryListingConfigGui"
+    ],
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-directory-listing/0.1/jmeter-plugins-directory-listing-0.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.2": {
+        "changes" : "<p>Fixed resolve JMeter variables for Destination Variable name</p><p>Fix relative path</p>",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-plugins-directory-listing/0.2/jmeter-plugins-directory-listing-0.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "bzm-random-csv",
+    "name": "Random CSV Data Set",
+    "description": "Config item that allows reading CSV files in random order",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-bzm-plugins/master/random-csv-data-set/randomCSVDataSetConfig.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/random-csv-data-set/RandomCSVDataSetConfig.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.RandomCSVDataSetConfig",
+    "componentClasses": [
+      "com.blazemeter.jmeter.RandomCSVDataSetConfig",
+      "com.blazemeter.jmeter.RandomCSVDataSetConfigGui"
+    ],
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/csv-random-0.1/jmeter-plugins-random-csv-data-set-0.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.2": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/csv-random-0.2/jmeter-plugins-random-csv-data-set-0.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.3": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/csv-random-0.3/jmeter-plugins-random-csv-data-set-0.3.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.4": {
+        "changes": "optimize performance, fix empty lines processing, fix browse button dialog",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/csv-random-0.4/jmeter-plugins-random-csv-data-set-0.4.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.5": {
+        "changes": "fix distributed functioning",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/csv-random-0.5/jmeter-plugins-random-csv-data-set-0.5.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.6": {
+        "changes": "fix leak with open files",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-plugins-random-csv-data-set/0.6/jmeter-plugins-random-csv-data-set-0.6.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "bzm-parallel",
+    "name": "Parallel Controller & Sampler",
+    "description": "Parallel Controller makes all of its children to run in parallel to each other",
+    "screenshotUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/raw/master/parallel/ParallelController.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/parallel/Parallel.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.controller.ParallelSampler",
+    "componentClasses": [
+      "com.blazemeter.jmeter.controller.DummyThreadGroup",
+      "com.blazemeter.jmeter.controller.ParallelControllerGui",
+      "com.blazemeter.jmeter.controller.ParallelSampler",
+      "com.blazemeter.jmeter.http.ParallelHTTPSampler",
+      "com.blazemeter.jmeter.http.ParallelHTTPSamplerGui"
+    ],
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jmeter-parallel-0.1/jmeter-parallel-0.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      },
+      "0.2": {
+        "changes": "Fixed class name clash with Debugger plugin",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jmeter-parallel-0.2/jmeter-parallel-0.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      },
+      "0.3": {
+        "changes" : "Fixed remote execution",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-parallel/0.3/jmeter-parallel-0.3.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      },
+      "0.4": {
+        "changes" : "Fixed reset Thread Context in all AbstractTestElements",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-parallel/0.4/jmeter-parallel-0.4.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      }
+    }
+  },
+  {
+    "id": "jpgc-rotating-listener",
+    "name": "Rotating JTL Listener",
+    "description": "Rotating listener provides writing sequence of files, limited by number of samples per file.",
+    "screenshotUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/rotating-listener/rotatingListener.png?raw=true",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/rotating-listener/RotatingListener.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.RotatingResultCollector",
+    "componentClasses": [
+      "com.blazemeter.jmeter.RotatingResultCollector",
+      "com.blazemeter.jmeter.RotatingResultCollectorGui"
+    ],
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-rotating-listener/0.1/jmeter-plugins-rotating-listener-0.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.2": {
+        "changes" : "Fixed file naming when file hasn't extension",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-plugins-rotating-listener/0.2/jmeter-plugins-rotating-listener-0.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "jpgc-sense",
+    "name": "BlazeMeter Uploader",
+    "description": "This is special plugin in for uploading results to BlazeMeter/BlazeMeter Sense during test running or immediately after test end",
+    "screenshotUrl": "https://raw.githubusercontent.com/artem-fedorov/jmeter-bzm-plugins/bzm-uploader/sense-uploader/BlazeMeterPlugin.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/sense-uploader/BlazemeterPlugin.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "kg.apc.jmeter.reporters.LoadosophiaUploader",
+    "componentClasses": [
+      "kg.apc.jmeter.reporters.LoadosophiaUploader",
+      "kg.apc.jmeter.reporters.LoadosophiaUploaderGui",
+      "kg.apc.jmeter.reporters.bzm.BlazeMeterUploader",
+      "kg.apc.jmeter.reporters.bzm.BlazeMeterUploaderGui"
+    ],
+    "versions": {
+      "2.0": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/2.0/jmeter-plugins-senseuploader-2.0.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "2.1": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/2.1/jmeter-plugins-senseuploader-2.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "2.2": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/2.2/jmeter-plugins-senseuploader-2.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "2.3": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/2.3/jmeter-plugins-senseuploader-2.3.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "2.4": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/2.4/jmeter-plugins-senseuploader-2.4.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "3.0": {
+        "changes": "Added BlazeMeter Uploader",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-senseuploader/3.0/jmeter-plugins-senseuploader-3.0.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "3.2": {
+        "changes": "Migrated to BackendListener",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jpgc-sense-3.2/jmeter-plugins-senseuploader-3.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "3.3": {
+        "changes": "Fixed distributed mode",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jpgc-sense-3.3/jmeter-plugins-senseuploader-3.3.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "3.4": {
+        "changes": "Fixed results saving",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jpgc-sense-3.4/jmeter-plugins-senseuploader-3.4.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "jpgc-wsc",
+    "name": "Weighted Switch Controller",
+    "description": "This controller takes the information about child elements and offers managing relative weights for them.",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-bzm-plugins/master/wsc/WeightedSwitchController.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/wsc/WeightedSwitchController.md",
+    "vendor": "JMeter-Plugins.org",
+    "markerClass": "com.blazemeter.jmeter.control.WeightedSwitchController",
+    "componentClasses": [
+      "com.blazemeter.jmeter.control.WeightedSwitchController",
+      "com.blazemeter.jmeter.control.WeightedSwitchControllerGui"
+    ],
+    "versions": {
+      "0.1": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-wsc/0.1/jmeter-plugins-wsc-0.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar"
+        }
+      },
+      "0.2": {
+        "changes": "<p>Fixed samples generation in nested controllers(Transaction, Simple, Weighted Switch);</p><p>- Fixed samples generation with disabled subgroups;</p><p>- Added effect of disabled subgroups in GUI;</p><p>- Added a ban on changing the column 'Name' and the disabled subgroup in GUI</p>",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-wsc/0.2/jmeter-plugins-wsc-0.2.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter>=0.5": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.5/jmeter-plugins-cmn-jmeter-0.5.jar"
+        }
+      },
+      "0.3": {
+        "changes": "fix test plan reloading",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-plugins-wsc/0.3/jmeter-plugins-wsc-0.3.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter>=0.5": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.5/jmeter-plugins-cmn-jmeter-0.5.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "jpgc-xmpp",
+    "name": "XMPP Protocol Support",
+    "description": "Enables testing XMPP (Jabber) protocol servers",
+    "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-bzm-plugins/master/xmpp/xmpp-sampler.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/xmpp/XMPPSampler.md",
+    "vendor": "BlazeMeter.com",
+    "markerClass": "com.blazemeter.jmeter.xmpp.JMeterXMPPSampler",
+    "componentClasses": [
+      "com.blazemeter.jmeter.xmpp.JMeterXMPPConnection",
+      "com.blazemeter.jmeter.xmpp.JMeterXMPPConnectionGui",
+      "com.blazemeter.jmeter.xmpp.JMeterXMPPSampler",
+      "com.blazemeter.jmeter.xmpp.JMeterXMPPSamplerGui"
+    ],
+    "versions": {
+      "1.4.0": {
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-xmpp/1.4.0/jmeter-plugins-xmpp-1.4.0.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar",
+          "smack-core": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-core/4.0.7/smack-core-4.0.7.jar",
+          "smack-tcp": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-tcp/4.0.7/smack-tcp-4.0.7.jar",
+          "smack-bosh": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-bosh/4.0.7/smack-bosh-4.0.7.jar",
+          "smack-extensions": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-extensions/4.0.7/smack-extensions-4.0.7.jar",
+          "jbosh": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/jbosh/jbosh/0.8.0/jbosh-0.8.0.jar"
+        }
+      },
+      "1.5.1": {
+        "changes": "Added support for 'from mode' option in XMPP Connection",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-xmpp/1.5.1/jmeter-plugins-xmpp-1.5.1.jar",
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.4/jmeter-plugins-cmn-jmeter-0.4.jar",
+          "smack-core": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-core/4.0.7/smack-core-4.0.7.jar",
+          "smack-tcp": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-tcp/4.0.7/smack-tcp-4.0.7.jar",
+          "smack-bosh": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-bosh/4.0.7/smack-bosh-4.0.7.jar",
+          "smack-extensions": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/smack/smack-extensions/4.0.7/smack-extensions-4.0.7.jar",
+          "jbosh": "https://search.maven.org/remotecontent?filepath=org/igniterealtime/jbosh/jbosh/0.8.0/jbosh-0.8.0.jar"
+        }
+      }
+    }
+  },
+  {
+    "id": "bzm-hls",
+    "name": "HLS Sampler",
+    "description": "HLS protocol sampler, enabling testing for streaming applications",
+    "screenshotUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/raw/master/hls/HLSPluginView.png",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/hls/README.md",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.hls.logic.HlsSampler",
+    "componentClasses": [
+      "com.blazemeter.jmeter.hls.gui.HlsSamplerGui",
+      "com.blazemeter.jmeter.hls.logic.HlsSampler"
+    ],
+    "versions": {
+      "1.0": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jmeter-hls-1.0/jmeter-hls-1.0.jar",
+        "depends": [
+          "jmeter-http"
+        ]
+      },
+      "1.1": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jmeter-hls-1.1/jmeter-hls-1.1.jar",
+        "libs": {
+          "mqtt-websocket-java": "https://github.com/inventit/mqtt-websocket-java/releases/download/1.0.1/mqtt-websocket-java-1.0.1.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      },
+      "1.2": {
+        "changes": "Some bugs fixed",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/jmeter-hls-1.2/jmeter-hls-1.2.jar",
+        "libs": {
+          "mqtt-websocket-java": "https://github.com/inventit/mqtt-websocket-java/releases/download/1.0.1/mqtt-websocket-java-1.0.1.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
+      }
+    }
+  },
+  {
+    "id": "bzm-http2",
+    "name": "HTTP/2 Sampler",
+    "description": "HTTP/2 protocol sampler",
+    "helpUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/http2/README.md",
+    "screenshotUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/raw/master/http2/http2Sampler.png",
+    "vendor": "BlazeMeter",
+    "markerClass": "com.blazemeter.jmeter.http2.sampler.HTTP2Request",
+    "componentClasses": [
+      "com.blazemeter.jmeter.http2.sampler.HTTP2Request",
+      "com.blazemeter.jmeter.http2.sampler.gui.HTTP2RequestGui",
+      "com.blazemeter.jmeter.http2.sampler.gui.Http2DefaultsGui",
+      "com.blazemeter.jmeter.http2.visualizers.ResultCollector",
+      "com.blazemeter.jmeter.http2.visualizers.SimpleDataWriter",
+      "com.blazemeter.jmeter.http2.visualizers.ViewResultsFullVisualizer"
+    ],
+    "versions": {
+      "1.0": {
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-bzm-plugins/releases/download/http2-1.0/jmeter-bzm-http2-1.0.jar",
+        "depends": [
+          "jmeter-http"
+        ],
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.5/jmeter-plugins-cmn-jmeter-0.5.jar",
+          "jetty-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-client/9.4.0.v20161208/jetty-client-9.4.0.v20161208.jar",
+          "jetty-util": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.4.0.v20161208/jetty-util-9.4.0.v20161208.jar",
+          "jetty-http": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-http/9.4.0.v20161208/jetty-http-9.4.0.v20161208.jar",
+          "jetty-io": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-io/9.4.0.v20161208/jetty-io-9.4.0.v20161208.jar",
+          "jetty-alpn-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-client/9.4.0.v20161208/jetty-alpn-client-9.4.0.v20161208.jar",
+          "http2-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-client/9.4.0.v20161208/http2-client-9.4.0.v20161208.jar",
+          "http2-common": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-common/9.4.0.v20161208/http2-common-9.4.0.v20161208.jar",
+          "http2-hpack": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-hpack/9.4.0.v20161208/http2-hpack-9.4.0.v20161208.jar",
+          "jetty-osgi-alpn": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/osgi/jetty-osgi-alpn/9.4.0.v20161208/jetty-osgi-alpn-9.4.0.v20161208.jar"
+        }
+      },
+      "1.1": {
+        "changes": "Fix memory leak and JTL output error",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-bzm-http2/1.1/jmeter-bzm-http2-1.1.jar",
+        "depends": [
+          "jmeter-http"
+        ],
+        "libs": {
+          "jmeter-plugins-cmn-jmeter": "https://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-cmn-jmeter/0.5/jmeter-plugins-cmn-jmeter-0.5.jar",
+          "jetty-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-client/9.4.0.v20161208/jetty-client-9.4.0.v20161208.jar",
+          "jetty-util": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.4.0.v20161208/jetty-util-9.4.0.v20161208.jar",
+          "jetty-http": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-http/9.4.0.v20161208/jetty-http-9.4.0.v20161208.jar",
+          "jetty-io": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-io/9.4.0.v20161208/jetty-io-9.4.0.v20161208.jar",
+          "jetty-alpn-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-client/9.4.0.v20161208/jetty-alpn-client-9.4.0.v20161208.jar",
+          "http2-client": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-client/9.4.0.v20161208/http2-client-9.4.0.v20161208.jar",
+          "http2-common": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-common/9.4.0.v20161208/http2-common-9.4.0.v20161208.jar",
+          "http2-hpack": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-hpack/9.4.0.v20161208/http2-hpack-9.4.0.v20161208.jar",
+          "jetty-osgi-alpn": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/osgi/jetty-osgi-alpn/9.4.0.v20161208/jetty-osgi-alpn-9.4.0.v20161208.jar"
+        }
+      }
+    }
+  }
+]
