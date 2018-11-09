@@ -70,7 +70,7 @@ public class RedisPostProcessorBeanInfo extends BeanInfoSupport{
             //        p.setValue(TAGS, GET_MODE_TAGS);
 
             p = property(GET_MODE, RedisPostProcessor.GetMode.class);
-            p.setValue(DEFAULT, RedisPostProcessor.GetMode.RANDOM_HGETALL.ordinal());
+            p.setValue(DEFAULT, RedisPostProcessor.GetMode.HGETALL.ordinal());
             p.setValue(NOT_UNDEFINED, Boolean.TRUE); // must be defined
 
             p = property(PARAMETER);

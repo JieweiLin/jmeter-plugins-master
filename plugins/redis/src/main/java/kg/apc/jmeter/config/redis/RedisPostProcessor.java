@@ -27,6 +27,7 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.io.Serializable;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 /**
  * @author 林杰炜 linjiewei
@@ -58,14 +59,16 @@ public class RedisPostProcessor extends AbstractScopedTestElement implements Tes
         /**
          * 方法
          */
-        RANDOM_HGETALL((byte) 0),
-        RANDOM_TTL((byte) 1),
-        RANDOM_EXPIRE((byte) 2),
-        RANDOM_GET((byte) 3),
-        RANDOM_DEL((byte) 4),
-        RANDOM_HGET((byte) 5),
-        RANDOM_EXISTS((byte) 6),
-        RANDOM_SET((byte) 7);
+        HGETALL((byte) 0),
+        TTL((byte) 1),
+        EXPIRE((byte) 2),
+        GET((byte) 3),
+        DEL((byte) 4),
+        HGET((byte) 5),
+        EXISTS((byte) 6),
+        SET((byte) 7),
+        KEYS((byte) 8),
+        TYPE((byte)9);
         private byte value;
 
         private GetMode(byte value) {
@@ -125,41 +128,54 @@ public class RedisPostProcessor extends AbstractScopedTestElement implements Tes
             jedis = pool.getResource();
             String line = null;
             log.info(redisKey);
-            if (getMode.equals(GetMode.RANDOM_HGETALL)) {
+            if (getMode.equals(GetMode.HGETALL)) {
                 line = JSONUtils.valueToString(jedis.hgetAll(this.redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_TTL)) {
+            } else if (getMode.equals(GetMode.TTL)) {
                 line = String.valueOf(jedis.ttl(redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_EXPIRE)) {
+            } else if (getMode.equals(GetMode.EXPIRE)) {
                 jedis.expire(redisKey, Integer.parseInt(parameter));
                 line = String.valueOf(jedis.ttl(redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_GET)) {
+            } else if (getMode.equals(GetMode.GET)) {
                 line = String.valueOf(jedis.get(redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_DEL)) {
+            } else if (getMode.equals(GetMode.DEL)) {
                 line = String.valueOf(jedis.del(redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_HGET)) {
+            } else if (getMode.equals(GetMode.HGET)) {
                 line = String.valueOf(jedis.hget(redisKey, parameter));
-            } else if (getMode.equals(GetMode.RANDOM_EXISTS)) {
+            } else if (getMode.equals(GetMode.EXISTS)) {
                 line = String.valueOf(jedis.exists(redisKey));
-            } else if (getMode.equals(GetMode.RANDOM_SET)) {
+            } else if (getMode.equals(GetMode.SET)) {
                 line = String.valueOf(jedis.set(redisKey, parameter));
+            } else if (getMode.equals(GetMode.KEYS)) {
+                Set<String> set = jedis.keys(redisKey);
+                String name = variableNames;
+                int i = 1;
+                for (String s : set) {
+                    threadVars.put(name + "_" + i, s);
+                    i++;
+                }
+                threadVars.put(name + "_N", String.valueOf((i-1)));
+            } else if (getMode.equals(GetMode.TYPE)){
+                line = jedis.type(redisKey);
             }
             if (line == null) {
                 throw new JMeterStopThreadException("End of redis data");
             }
-            final String names = variableNames;
-            if (vars == null) {
-                vars = JOrphanUtils.split(names, ",");
-            }
-            String[] values = {};
-            if (StringUtils.isNotBlank(delimiter)) {
-                values = JOrphanUtils.split(line, delimiter, false);
-            }
-            if (values.length > 0) {
-                for (int a = 0; a < vars.length && a < values.length; a++) {
-                    threadVars.put(vars[a], values[a]);
+            if (!getMode.equals(GetMode.KEYS)) {
+                final String names = variableNames;
+                if (vars == null) {
+                    vars = JOrphanUtils.split(names, ",");
                 }
-            } else {
-                threadVars.put(vars[0], line);
+                String[] values = {};
+                if (StringUtils.isNotBlank(delimiter)) {
+                    values = JOrphanUtils.split(line, delimiter, false);
+                }
+                if (values.length > 0) {
+                    for (int a = 0; a < vars.length && a < values.length; a++) {
+                        threadVars.put(vars[a], values[a]);
+                    }
+                } else {
+                    threadVars.put(vars[0], line);
+                }
             }
         } catch (Exception e) {
             log.info(e.getMessage());
